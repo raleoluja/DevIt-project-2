@@ -1,0 +1,50 @@
+.clients {
+    background-color: $white;
+}
+
+.clients-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 60px 0px;
+    width: 100%;
+    
+}
+
+.clients-item {
+    flex: 0 1 15%;
+    padding-left: 40px;
+}
+
+@include breakpoint(tablet) {
+    .clients-container {
+        padding: 60px 20px;
+    }
+}
+
+@include breakpoint(phone) {
+    
+    .clients-item {
+        flex: 0 1 50%;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .clients-item:nth-child(3){
+        flex: 0 1 100%;
+        text-align: center;
+    }
+    .clients-item:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .clients-item {
+        flex: 0 1 100%;
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,89 @@
+.works {
+    background-color: $white-smoke;
+}
+
+.works-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.work-item {
+    width: 25%;
+    position: relative;
+    padding-bottom: 22%;
+    display: none;
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 99;
+        transition: opacity .4s ease-in-out;
+        .eye {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &:hover .overlay {
+        opacity: .8;
+        
+    }
+}
+
+
+
+.work-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.load-more {
+    width: 200px;
+    margin: 27px auto;
+    padding-bottom: 28px;
+}
+
+.btn-load {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: $rhenium;
+    font-weight: 500;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 32px;
+    &:hover {
+        background-color: $rhenium;
+        color: $white;
+    }
+}
+
+.noContent {
+    color: $black ;
+    background-color: transparent;
+    pointer-events: none;
+}
+
+@include breakpoint(phone) {
+    .work-item {
+        width: 50%;
+        padding-bottom: 45%;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .work-item {
+        width: 100%;
+        padding-bottom: 95%;
+    }
+}

@@ -1,0 +1,41 @@
+.services {
+    background-color: $white-smoke;
+    padding-top: 100px;
+    padding-bottom: 47px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -11px;
+}
+
+.services-item {
+    flex: 1 1 25%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.services-title {
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: $mate-black;
+    font-weight: 500;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    margin-top: 14px;
+    margin-bottom: 4px;
+    
+}
+
+.services-text {
+    font-size: 16px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    color: $rhenium;
+    width: 235px;
+    margin: 0 auto;
+}

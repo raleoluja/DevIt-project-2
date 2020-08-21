@@ -1,0 +1,89 @@
+.banner {
+    position: relative;
+  }
+  
+  .banner-content {
+    position: absolute;
+    max-width: 500px;
+    // top: 165px;
+    top: 231px;;
+    right: 128px;
+  }
+  
+  .main-title {
+    font-size: 38px;
+    letter-spacing: -0.5px;
+    padding-left: 23px;
+    color: $george;
+    font-weight: 500;
+    font-family: $font-heading;
+    margin-bottom: 27px;
+  }
+  
+  .title-description {
+    font-size: 18px;
+    letter-spacing: 0px;
+    line-height: 28px;
+    color: $rhenium;
+    padding-left: 30px;
+    margin-bottom: 34px;
+  }
+  
+  .btn-contact-us {
+    margin-left: 30px;
+  }
+.banner-img {
+  @extend %bg-img;
+    height: 120vh;
+}
+
+@include breakpoint(tablet) {
+  .banner-img {
+    height: 100vh;
+  }
+}
+
+@include breakpoint(phone) {
+    .banner-content {
+      position: static;
+      width: 100%;
+      text-align: center;
+      padding: 100px 10px;
+      margin: 0 auto;
+    }
+    .main-title {
+      font-size: 32px;
+      padding: 0;
+    }
+    .title-description {
+      font-size: 16px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      color: $white-smoke;
+      padding: 0 10px;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .banner-content {
+        position: static;
+        width: 100%;
+        text-align: center;
+        padding: 100px 10px;
+        margin: 0 auto;
+    }
+    .main-title {
+      font-size: 26px;
+      padding: 0;
+    }
+    .title-description {
+      font-size: 14px;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+      color: $white-smoke;
+      padding: 0 10px;
+    }
+  
+    .btn-contact-us {
+      margin: 0;
+      font-size: 10px;
+    }
+}  

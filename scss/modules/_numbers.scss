@@ -1,0 +1,100 @@
+.numbers {
+    background-color: $blue;
+}
+  
+.numbers-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 96px 0;
+}
+  
+.number-item {
+    width: 23.2%;
+    display: flex;
+    .number-img {
+      margin-right: 25px;
+      width: 47px;
+    }
+}
+
+.number-content {
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: $white;
+  font-weight: 500;
+  font-family: $font-heading;
+  text-transform: uppercase;
+}
+
+.number-number {
+  font-size: 18px;
+  position: absolute;
+  top: -5px;
+}
+
+.number-text {
+  position: absolute;
+  white-space: nowrap;
+  top: 23px;
+}
+
+  
+@include breakpoint(tablet) {
+  .numbers-container {
+    justify-content: space-around;
+    padding-left: 40px;
+  }
+  
+  .number-item {
+    width: 48%;
+    &:nth-child(1),
+    &:nth-child(2){
+      margin-bottom: 30px;
+    }
+    .number-img {
+      margin-right: 25px;
+    }
+  }
+}
+
+@include breakpoint(phone) {
+  .numbers-container {
+    padding: 60px 0;
+    margin-left: 30%;
+  }
+  .number-item {
+    width: 98%;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include breakpoint(small-phone) {
+  .numbers-container {
+    margin-left: 4%;
+    padding: 50px 0;
+  }
+  .number-item {
+    width: 98%;
+    margin-bottom: 40px;
+    .number-img {
+      margin-right: 10px;
+    }
+  }
+  .number-item:last-child {
+    margin-bottom: 0;
+  }
+  .number-content {
+    font-size: 10px
+  }
+  .number-number {
+    font-size: 12px;
+    
+  }
+}

@@ -1,0 +1,95 @@
+.contact-form {
+    background-color: $white-smoke;
+}
+
+.contact-form-title {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.contact-form-text {
+    text-align: center;
+    width: 540px;
+    margin: 0 auto;
+}
+
+.form {
+    width: 670px;
+    margin: 0 auto;
+    @extend %clearfix;
+    padding-top: 35px;
+    padding-bottom: 100px;
+}
+
+.input-name {
+    float: left;
+}
+
+.input-email {
+    float: right;
+}
+
+input, textarea {
+    font-size: 15px;
+    letter-spacing: 0px;
+    line-height: 24px;
+    color: $rhenium;
+    padding: 11px 0px 11px 22px;
+    
+    font-family: $font-main;
+    font-weight: 400;
+    border: none;
+}
+
+.input-name,
+.input-email {
+    width: 48%;
+    margin-bottom: 32px;
+}
+
+.input-title {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.textarea-comment {
+    width: 100%;
+    height: 168px;
+    resize: none;
+    margin-bottom: 27px;
+}
+
+.btn-submit {
+    display: block;
+    margin: 0 auto;
+    padding: 13px 34px;
+}
+
+@include breakpoint(phone) {
+    .contact-form-text {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .form {
+        width: 420px;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .form {
+        width: auto;
+    }
+
+    .input-name,
+    .input-email {
+        width: 100%;
+    }
+
+    .contact-form-text {
+        display: none;
+    }
+    .contact-form-title {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,68 @@
+.scills-background-img {
+    @extend %bg-img;
+}
+
+.skills-content {
+    padding: 163px 0;
+}
+
+.scills-title {
+    margin-bottom: -5px;
+}
+
+.progress-bar-text {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: $black;
+    font-weight: 500;
+    font-family: $font-heading;
+    margin-bottom: 10px;
+    margin-top: 30px;
+}
+
+.skill-percent {
+    margin-left: 15px;
+}
+
+//progress bar
+.progress {
+    background: $light-silver;
+    height: 3px;
+    width: 43%;
+}
+
+.progress:after {
+    content: '';
+    display: block;
+    background: $blue;
+    height: 100%;
+}
+
+.progress-design:after {
+    width: 75%;
+}
+
+.progress-development:after {
+    width: 90%;
+}
+
+.progress-marketing:after {
+    width: 65%;
+}
+
+@include breakpoint(phone) {
+    .progress {
+        width: 70%;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .progress {
+        width: 90%;
+    }
+    .scills-title {
+        font-size: 24px;
+    }
+}

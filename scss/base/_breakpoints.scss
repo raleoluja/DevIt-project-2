@@ -1,0 +1,21 @@
+
+@mixin breakpoint($value) {
+    @if $value == 'small-phone' {
+        @media only screen and (min-width: 120px) and (max-width: 430px) { @content ; }
+   }
+    @else if $value == 'phone' {
+        @media only screen and (min-width: 430px) and (max-width: 767px) { @content ; }
+   }
+    @else if $value == 'tablet' {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) { @content ; }
+   }
+    @else if $value == 'ipad' {
+        @media only screen and (min-width: 1024px) and (max-width: 1300px) { @content ; }
+   }
+    @else if $value == 'computer' {
+        @media only screen and (min-width: 1300px) { @content ; }
+   }
+    @else  {
+        @media only screen and (max-width: $value) { @content ; }
+   }
+}

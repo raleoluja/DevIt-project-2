@@ -1,0 +1,66 @@
+.work-process {
+    background-color: $white;
+    padding-top: 70px;
+    padding-bottom: 95px;
+}
+
+.work-process-title {
+    text-align: center;
+}
+
+.work-process-text {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 54px;
+}
+
+.work-process-video {
+    width: 100%;
+    height: 570px;
+    object-fit: cover;
+}
+
+.video-container {
+    position: relative;
+}
+
+.video-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85px;
+    height: 85px;
+    background-color: $blue;
+    border-radius: 50%;
+}
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.play-hidden {
+    display: none;
+}
+
+@include breakpoint(phone) {
+    .work-process-text {
+        width: auto;
+        margin: 0 auto;
+        margin-bottom: 54px;
+        padding: 0 20px;
+    }
+}
+
+@include breakpoint(small-phone) {
+    .work-process-text {
+        display: none;
+    }
+    .work-process-title {
+        font-size: 24px;
+    }
+}
